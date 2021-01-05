@@ -1,0 +1,792 @@
+/*Шрифты*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/*Обнуление стилей
+============================================*/
+* {
+	box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+}
+
+ul, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+input {
+	padding: 0;
+	border: 0;
+	border-width: 0;
+}
+
+body, html {
+	overflow-x: hidden;
+}
+/*Header
+============================================*/
+.header {
+	max-width: 100%;
+	background-color: #fff;
+	padding: 20px 105px 32px 105px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.list-items {
+	display: flex;
+	align-items: center;
+}
+
+.list-item {
+	margin-right: 40px;
+	position: relative;
+}
+
+
+.list-item:last-child {
+	margin-right: 0;
+}
+
+.list-item:first-child:after {
+	content: '';
+	display: block;
+	position: absolute;
+	background-color: #000;
+	width: 100%;
+	height: 3px;
+}
+
+.list-item a {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 22px;
+	color: #000;
+}
+
+.contacts {
+	max-width: 303px;
+}
+
+.inst a {
+	margin-right: 36px;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+	color: #000;
+}
+
+.number a {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 22px;
+	color: #000;
+}
+/*Intro
+============================================*/
+.intro {
+	position: relative;
+	background-image: url('../img/intro.png');
+	width: 100%;
+	min-height: 950px;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+}
+
+.content-intro {
+	position: absolute;
+	top: 287px;
+	left: 356px;
+	max-width: 900px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.title-intro {
+	padding-bottom: 23px;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 130%;
+	letter-spacing: 0.03em;
+	color: #fff;
+}
+
+.subtitle-price-intro {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 28px;
+	color: #fff;
+}
+
+.subtitle-intro {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	color: #fff;
+}
+
+.button-intro {
+	margin-top: 61px;
+}
+
+.button-intro-link {
+	background-color: #D01010;
+	box-shadow: 0px 10px 20px rgba(60, 0, 0, 0.1);
+	border-radius: 7px;
+	padding: 16px 39px;
+
+	letter-spacing: 0.03em;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 16px;
+	color: #fff;
+}
+/*About
+============================================*/
+.about {
+	max-width: 1200px;
+	margin: 150px auto auto auto;
+}
+
+.about-text {
+	max-width: 800px;
+	margin-left: 10px;
+}
+
+.about-title {
+	margin-bottom: 24px;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 64px;
+	color: #000;
+}
+
+.about-subtitle {
+	max-width: 600px;
+	margin-bottom: 20px;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+}
+
+.about-subtitle:last-child {
+	margin-bottom: 0;
+}
+
+.advantages {
+	margin-top: 83px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.advantage-item {
+	position: relative;
+	margin-bottom: 37px;
+}
+
+.advantage-item-img img {
+	max-width: 100%;
+}
+
+.advantage-text-img {
+	position: absolute;
+	top: 45px;
+	right: 30px;
+	left: 22px;
+}
+
+.advantage-img-title {
+	display: block;
+	margin-bottom: 22px;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	color: #fff;
+}
+
+.advantage-img-subtitle {
+	width: 330px;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 140%;
+	color: #fff;
+}
+/*Slider
+============================================*/
+.slide-item-link img {
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+.slick-track {
+	transition: 0.01s;
+}
+
+.slides {
+	margin: 0 auto;
+    max-width: 1920px;
+	margin-top: 163px;
+	margin-bottom: 200px;
+}
+
+.slider-arrows {
+	background-color: #fff;
+	cursor: pointer;
+}
+
+.slider-arrows__next {
+	z-index: 1;
+	position: absolute;
+    bottom: 49px;
+    right: 359px;
+	padding: 50px;
+	border-radius: 0px 7px 7px 0px;
+}
+
+.slider-arrows__prev {
+	z-index: 1;
+	position: absolute;
+    bottom: 49px;
+    right: 473px;
+	padding: 50px;
+	border-radius: 7px 0px 0px 0px;
+}
+/*Map
+============================================*/
+.map {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.map-title {
+	margin-bottom: 58px;
+
+	text-align: center;
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 64px;
+	color: #000;
+}
+
+.map-img {
+	max-width: 100%;
+}
+/*House projects
+============================================*/
+.house-projects {
+	max-width: 1206px;
+	margin: 0 auto;
+	margin-top: 200px;
+	margin-bottom: 86px;
+}
+
+.projects-cards {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.text-projects {
+	padding-bottom: 90px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.project-title {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 64px;
+	color: #000;
+}
+
+.all-projects {
+	display: flex;
+	align-items: center;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	color: #000;
+}
+
+.arrow-bg {
+	position: relative;
+	background-color: #fff;
+	box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
+	border-radius: 7px;
+	padding: 35px;
+	margin-left: 20px;
+}
+
+.arrow-bg:after {
+	content: '';
+	display: block;
+	background-image: url('../img/projects/right.svg');
+	background-repeat: no-repeat;
+	width: 14px;
+	height: 23px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.projects-card {
+	max-width: 387px;
+	background-color: #fff;
+	box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
+	border-radius: 7px;
+	transition: 0.5s;
+}
+
+.projects-card:hover {
+	transform: scale(1.01);
+	transition: 0.3s;
+}
+
+.card-content {
+	padding: 30px 30px 20px 30px;
+}
+
+.name-house {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 28px;
+	color: #000;
+}
+
+.card-floor {
+	margin-top: 23px;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	color: #000;
+}
+
+.card-title {
+	overflow: hidden;
+	margin-top: 20px;
+	margin-bottom: 52px;
+	height: 90px;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: #000;
+}
+
+.price {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 24px;
+	line-height: 140%;
+	color: #000;
+}
+
+.card-cost {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 9px;
+	color: #000;
+}
+/*House projects
+============================================*/
+.techno {
+	max-width: 1201px;
+	margin: 0 auto;
+}
+
+.techno-items {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.techno-item {
+	position: relative;
+}
+
+.techno-item-img img {
+	max-width: 100%;
+}
+
+.techno-text-img {
+	position: absolute;
+	top: 34px;
+	left: 12px;
+	right: 15px;
+}
+
+.techno-img-title {
+	display: block;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px;
+	color: #fff;
+}
+
+.techno-img-subtitle {
+	width: 261px;
+	margin-top: 20px;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 140%;
+	color: #fff;
+}
+/*Developer
+============================================*/
+.developer {
+	max-width: 1211px;
+	margin: 0 auto;
+	margin-top: 147px;
+}
+
+.developer-title {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 64px;
+	color: #000;
+}
+
+.developer-quote {
+	margin-top: 26px;
+}
+
+.developer-comment {
+	max-width: 670px;
+	margin-left: 17px;
+	position: relative;
+
+	font-family: Montserrat;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 140%;
+	color: #000;
+}
+
+.developer-comment:before {
+	content: '';
+	position: absolute;
+	top: -5px;
+	left: -17px;
+	background-color: #000;
+	width: 1px;
+	height: 90px;
+}
+
+.developer-ooo {
+	margin-top: 42px;
+	margin-bottom: 99px;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	color: #000;
+}
+
+.developer-slide {
+	position: relative;
+}
+
+.developer-slide-img {
+	max-width: 100%;
+}
+
+.developer-slide-text {
+	position: absolute;
+	top: 104px;
+	left: 60px;
+	right: 60px;
+}
+
+.developer-slide-title {
+	width: 570px;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 64px;
+	color: #fff;
+}
+
+.developer-slide-subtitle {
+	margin-top: 20px;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	line-height: 22px;
+	color: #fff;
+}
+
+.developer-dots {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.developer-dots li {
+	margin: 0 7.5px;
+}
+
+.developer-dots li button {
+	font-size: 0;
+	line-height: 0;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	outline: none;
+	background-color: transparent;
+	border: 3px solid #c4c4c4;
+	padding: 0;
+}
+
+.developer-dots li[class="slick-active"] button {
+  	background-color: #d01010;
+  	border: 0;
+  	width: 15px;
+	height: 15px;
+}
+/*Dynamic
+============================================*/
+.dynamic {
+	max-width: 1210px;
+	margin: 0 auto;
+	margin-top: 200px;
+}
+
+.dynamic-title {
+	margin-bottom: 80px;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 64px;
+	color: #000;
+}
+
+.dynamic-cards {
+	max-width: 1210px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.dynamic-card {
+	margin-right: 38px;
+	margin-bottom: 3px;
+	max-width: 375px;
+	background-color: #fff;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+	border-radius: 7px;
+}
+
+.dynamic-card-img {
+	max-width: 100%;
+}
+
+.dynamic-card-content {
+	padding: 30px 63px 30px 28px;
+}
+
+.dynamic-name-house {
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 140%;
+	color: #000;
+}
+
+.dynamic-subtitle {
+	margin-top: 20px;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 140%;
+	color: #000;
+}
+
+.dynamic-date {
+	margin-top: 36px;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 18px;
+	color: #000;
+}
+
+.dynamic-dots {
+	display: flex;
+	align-items: center;
+	margin-top: 40px;
+}
+
+.dynamic-dots li {
+	margin: 0 7.5px;
+}
+
+.dynamic-dots li button {
+	font-size: 0;
+	line-height: 0;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	outline: none;
+	background-color: transparent;
+	border: 3px solid #c4c4c4;
+	padding: 0;
+}
+
+.dynamic-dots li[class="slick-active"] button {
+  	background-color: #d01010;
+  	border: 0;
+  	width: 15px;
+	height: 15px;
+}
+/*Location
+============================================*/
+.location {
+	max-width: 1920px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.location-map {
+	max-width: 1920px;
+	margin: 0 auto;
+	background-color: #939393;
+	padding: 325px 0;
+}
+
+.location-bg {
+	position: absolute;
+	top: 83%;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 35px 128px 34px 143px;
+	background-color: #fff;
+	width: 1200px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.bg {
+	margin-right: 63px;
+
+	font-family: Montserrat;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	color: #000;
+}
+
+.bg:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
+	padding: 15px;
+	background-color: #939393;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+
+.bg-base {
+	margin-bottom: 41px;
+}
+
+.bg-pharmacy {
+	margin-bottom: 41px;
+}
+
+.bg-store {
+	margin-bottom: 41px;
+}
+
+.bg-child {
+	margin-bottom: 41px;
+}
+
+.bg-school {
+	margin-bottom: 41px;
+}
+
+.bg-mail {
+	
+}
+
+.bg-library {
+
+}
+
+.bg-atm {
+
+}
+
+.bg-ss {
+	
+}
