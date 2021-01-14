@@ -1,3 +1,7 @@
+
+
+
+
 $('.slides').slick({
   centerMode: true,
   centerPadding: '230px',
