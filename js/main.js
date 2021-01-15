@@ -1,3 +1,17 @@
+document.querySelector('.burger-btn').addEventListener('click', () => {
+	var win = document.querySelector('.burger-items');
+	var body = document.querySelector('body');
+	var html = document.querySelector('html');
+	if (win.classList.contains('burger-items-active')) {
+		win.classList.remove('burger-items-active');
+		body.style.overflowX = 'hidden';
+		html.style.overflowX = 'hidden';
+	} else {
+		win.classList.add('burger-items-active');
+		body.style.overflow = 'hidden';
+		html.style.overflow = 'hidden';
+	}
+});
 
 
 
@@ -6,6 +20,7 @@ $('.slides').slick({
   centerMode: true,
   centerPadding: '230px',
   slidesToShow: 1,
+  swipe: false,
   nextArrow:
   '<img class="slider-arrows slider-arrows__next" src="img/slider/right.svg">',
   prevArrow:
@@ -46,6 +61,7 @@ $('.slides').slick({
 
 
 $('.developer-slides').slick({
+  infinite: false,
   slidesToShow: 1,
   dots: true,
   dotsClass: "developer-dots",
@@ -53,6 +69,7 @@ $('.developer-slides').slick({
 
 
 $('.dynamic-cards').slick({
+  infinite: false,
   slidesToShow: 3,
   slidesToScroll: 3,
   dots: true,

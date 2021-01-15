@@ -63,7 +63,80 @@
 }
 
 @media screen and (max-width: 1280px) {
-	.list-items {
+	.list-item a {
+		font-size: 15px;
+	}
+	.inst a, .number a {
+		font-size: 15px;
+	}
+	.title-intro {
+		font-size: 40px;
+	}
+	.subtitle-price-intro {
+		font-size: 22px;
+	}
+	.subtitle-intro {
+		font-size: 16px;
+	}
+	.button-intro-link {
+		font-size: 15px;
+	}
+	.about {
+		margin: 100px auto auto auto;
+	}
+	.about-title, .map-title, .project-title, .developer-title, .dynamic-title, .location-title {
+		font-size: 54px;
+	}
+	.slides {
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+	.slider-arrows__next {
+		right: 48px;
+    	bottom: 49px;
+	}
+	.slider-arrows__prev {
+    	right: 162px;
+    	bottom: 49px;
+	}
+	.house-projects {
+		margin-top: 100px;
+	}
+	.techno-img-title {
+		font-size: 20px;
+	}
+	.techno-img-subtitle {
+		font-size: 15px;
+		line-height: 24px;
+	}
+	.developer {
+		margin-top: 100px;
+	}
+	.developer-slide-title {
+		font-size: 58px;
+	}
+	.dynamic {
+		margin-top: 100px;
+	}
+	.location {
+		margin-top: 100px;
+	}
+	.footer-nav li a, .footer-inst, .footer-tel, .footer-ooo, .footer-politics {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.header {
+		justify-content: start;
+	}
+	.list {
 		display: none;
+	}
+	.contacts {
+		margin-left: auto;
+	}
+	.burger {
+		display: block;
 	}
 }

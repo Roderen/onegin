@@ -31,7 +31,7 @@ input {
 	border-width: 0;
 }
 
-body {
+body, html {
 	overflow-x: hidden;
 }
 /*Header
@@ -145,6 +145,11 @@ body {
 
 	display: none;
 	opacity: 0;
+}
+
+.burger-items-active {
+	display: flex;
+	opacity: 1;
 }
 
 .burger-item a {
@@ -343,6 +348,14 @@ body {
 	padding: 50px;
 	border-radius: 7px 0px 0px 0px;
 }
+
+.dynamic .slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 5px;
+}
 /*Map
 ============================================*/
 .map {
@@ -446,6 +459,10 @@ body {
 	padding: 30px 30px 20px 30px;
 }
 
+.card-link img {
+	max-width: 100%;
+}
+
 .name-house {
 	font-family: Montserrat;
 	font-style: normal;
@@ -475,6 +492,12 @@ body {
 	font-weight: normal;
 	font-size: 18px;
 	color: #000;
+}
+
+.card-price {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .price {
