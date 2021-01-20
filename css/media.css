@@ -139,4 +139,7 @@
 	.burger {
 		display: block;
 	}
+	.burger-btn {
+		margin-left: 40px;
+	}
 }

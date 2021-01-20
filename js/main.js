@@ -1,15 +1,12 @@
 document.querySelector('.burger-btn').addEventListener('click', () => {
-	var win = document.querySelector('.burger-items');
+	var win = document.querySelector('.burger');
 	var body = document.querySelector('body');
 	var html = document.querySelector('html');
-	if (win.classList.contains('burger-items-active')) {
-		win.classList.remove('burger-items-active');
-		body.style.overflowX = 'hidden';
-		html.style.overflowX = 'hidden';
+	if (win.classList.contains('burger-active')) {
+		win.classList.remove('burger-active');
+
 	} else {
-		win.classList.add('burger-items-active');
-		body.style.overflow = 'hidden';
-		html.style.overflow = 'hidden';
+		win.classList.add('burger-active');
 	}
 });
 
