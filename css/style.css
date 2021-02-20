@@ -37,6 +37,7 @@ body, html {
 /*Header
 ============================================*/
 .header {
+	position: relative;
 	max-width: 1920px;
 	margin: 0 auto;
 	background-color: #fff;
@@ -109,18 +110,19 @@ body, html {
 	position: absolute;
 	top: 134px;
 	right: -500px;
+	width: 430px;
 	background-color: #fff;
-	z-index: 1001;
-	transition: 0.7s ease-in;
+	z-index: 100000;
+	transition: 0.7s;
 }
 
 .burger-active {
-	right: 0;
-	transition: 0.7s ease-out;
+	right: 0!important; /*!important - without this property, the burger will not leave*/
+	transition: 0.7s;
 }
 
 .burger-list {
-	margin: 10px 100px 0 70px;
+	margin: 20px 0 20px 60px;
 }
 
 .burger-item a {
@@ -133,6 +135,7 @@ body, html {
 }
 
 .burger-contacts {
+	display: none;
 	margin-top: 20px;
 }
 
@@ -182,6 +185,10 @@ body, html {
 	border-bottom: 1px solid #000;
 	position: absolute;
 	top: 8px;
+}
+
+.burger-btn {
+	display: none;
 }
 /*Intro
 ============================================*/
@@ -369,7 +376,7 @@ body, html {
     bottom: 49px;
     right: 473px;
 	padding: 50px;
-	border-radius: 7px 0px 0px 0px;
+	border-radius: 7px 0px 0px 7px;
 }
 
 .dynamic .slick-list {
@@ -406,7 +413,7 @@ body, html {
 	max-width: 1206px;
 	margin: 0 auto;
 	margin-top: 200px;
-	margin-bottom: 86px;
+	margin-bottom: 100px;
 }
 
 .projects-cards {
@@ -539,7 +546,7 @@ body, html {
 	font-size: 9px;
 	color: #000;
 }
-/*House projects
+/*Techno
 ============================================*/
 .techno {
 	max-width: 1201px;
@@ -547,10 +554,11 @@ body, html {
 }
 
 .techno-items {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-rows: 395px 1fr;
+	grid-template-columns: repeat(4, 289px);
+	grid-column-gap: 11px;
+	justify-content: center;
 }
 
 .techno-item {
@@ -846,12 +854,15 @@ body, html {
 	padding: 35px 128px 34px 143px;
 	background-color: #fff;
 	width: 1200px;
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(6, 1fr);
+	grid-row-gap: 30px;
+	grid-column-gap: 30px;
+	justify-content: center;
 }
 
 .bg {
-	margin-right: 35px;
 	min-width: 150px;
 
 	font-family: Montserrat;
@@ -870,42 +881,6 @@ body, html {
 	border-radius: 50%;
 	margin-right: 15px;
 }
-
-.bg-base {
-	margin-bottom: 41px;
-}
-
-.bg-pharmacy {
-	margin-bottom: 41px;
-}
-
-.bg-store {
-	margin-bottom: 41px;
-}
-
-.bg-child {
-	margin-bottom: 41px;
-}
-
-.bg-school {
-	margin-bottom: 41px;
-}
-
-.bg-mail {
-	
-}
-
-.bg-library {
-
-}
-
-.bg-atm {
-
-}
-
-.bg-ss {
-	
-}
 /*Call Back
 ============================================*/
 .call-back {
@@ -914,7 +889,6 @@ body, html {
 	margin-top: 200px;
 	margin-bottom: 200px;
 	display: flex;
-	flex-wrap: wrap;
 	filter: drop-shadow(0px 0px 50px rgba(0, 0, 0, 0.1));
 	background-color: #fff;
 	border-radius: 0px 7px 7px 0px;
@@ -1079,4 +1053,818 @@ body, html {
 	font-weight: 500;
 	font-size: 18px;
 	color: #fff;
+}
+
+/*@media
+=================================================
+=================================================*/
+@media screen and (max-width: 1600px) {
+	.header {
+	    padding: 20px 40px 32px 40px;
+	}
+	.content-intro {
+	    left: 200px;
+	}
+	.slider-arrows__next {
+		right: 198px;
+	}
+	.slider-arrows__prev {
+		right: 311px;
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.list-item a {
+		font-size: 17px;
+	}
+	.inst a, .number a {
+		font-size: 17px;
+	}
+	.content-intro {
+	    left: 115px;
+	}
+	.slider-arrows__next {
+		right: 128px;
+		bottom: 47px;
+	}
+	.slider-arrows__prev {
+		right: 240px;
+		bottom: 47px;
+	}
+}
+
+@media screen and (max-width: 1366px) {
+	.list-item {
+		margin-right: 30px;
+	}
+	.list-item:last-child {
+		margin-right: 0;
+	}
+	.list-item a {
+		font-size: 16px;
+	}
+	.inst a, .number a {
+		font-size: 16px;
+	}
+	.inst a {
+		margin-right: 26px;
+	}
+	.slider-arrows__next {
+    	right: 125px;
+    	bottom: 45px;
+	}
+	.slider-arrows__prev {
+    	right: 237px;
+    	bottom: 45px;
+	}
+	.footer-contacts {
+	    margin: 154px 100px 0 100px;
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.list-item a {
+		font-size: 15px;
+	}
+	.inst a, .number a {
+		font-size: 15px;
+	}
+	.title-intro {
+		font-size: 40px;
+	}
+	.subtitle-price-intro {
+		font-size: 22px;
+	}
+	.subtitle-intro {
+		font-size: 16px;
+	}
+	.button-intro-link {
+		font-size: 15px;
+	}
+	.about {
+		margin: 100px auto auto auto;
+	}
+	.about-title, .map-title, .project-title, .developer-title, .dynamic-title, .location-title {
+		font-size: 54px;
+	}
+	.slides {
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+	.slider-arrows__next {
+		right: 48px;
+    	bottom: 49px;
+	}
+	.slider-arrows__prev {
+    	right: 162px;
+    	bottom: 49px;
+	}
+	.house-projects {
+		margin-top: 100px;
+	}
+	.techno-img-title {
+		font-size: 20px;
+	}
+	.techno-img-subtitle {
+		font-size: 15px;
+		line-height: 24px;
+	}
+	.developer {
+		margin-top: 100px;
+	}
+	.developer-slide-title {
+		font-size: 58px;
+	}
+	.dynamic {
+		margin-top: 100px;
+	}
+	.location {
+		margin-top: 100px;
+	}
+	.footer-nav li a, .footer-inst, .footer-tel, .footer-ooo, .footer-politics {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.header {
+		justify-content: start;
+	}
+	.list {
+		display: none;
+	}
+	.contacts {
+		margin-left: auto;
+	}
+	.burger {
+		display: block;
+	}
+	.burger-btn {
+		display: block;
+		margin-left: 40px;
+	}
+	.location-bg {
+    	grid-template-columns: repeat(5, 1fr);
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.title-intro {
+		width: 600px;
+    	font-size: 30px;
+	}
+	.subtitle-price-intro {
+    	font-size: 18px;
+	}
+	.subtitle-intro {
+    	font-size: 14px;
+	}
+	.button-intro-link {
+		padding: 14px 35px;
+		font-size: 14px;
+	}
+	.about {
+		max-width: 800px;
+	}
+	.slider-arrows__next {
+		padding: 35px 40px;
+    	right: 38px;
+    	bottom: 39px;
+	}
+	.slider-arrows__prev {
+		padding: 35px 40px;
+       	left: 38px;
+    	bottom: 39px;
+	}
+	.about-title, .map-title, .project-title, .developer-title, .dynamic-title, .location-title {
+    	font-size: 38px;
+	}
+	.all-projects {
+	    font-size: 18px;
+	}
+	.arrow-bg {
+		padding: 30px;
+	}
+	.text-projects {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+	.projects-card:nth-child(3) {
+		margin-top: 90px;
+	}
+	.techno-items {
+		grid-template-columns: repeat(2, 289px);
+		grid-gap: 40px;
+	}
+	.developer-title, .developer-quote {
+		margin-right: 30px;
+		margin-left: 30px;
+	}
+	.dynamic {
+		max-width: 860px;
+	}
+	.dynamic-title {
+		margin-left: 30px;
+	}
+	.dynamic-card {
+		margin-right: 100px;
+	}
+	.location-title {
+		margin-left: 30px;
+	}
+	.to-order {
+		margin: 30px 0 30px 30px;
+	}
+	.to-order-title {
+		font-size: 28px;
+	}
+	.form input[placeholder] {
+		font-size: 16px;
+	}
+	.form input {
+		width: 450px;
+	}
+	.send-form {
+		font-size: 15px;
+	}
+	.footer {
+		padding: 40px 0;
+	}
+	.footer-contacts {
+    	margin: 100px 50px 0 50px;
+	}
+	.footer-nav li a, .footer-inst, .footer-tel, .footer-ooo, .footer-politics {
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.projects-cards {
+		flex-direction: column;
+	}
+	.projects-card, .projects-card:nth-child(3) {
+    	margin-top: 50px;
+	}
+	.location-bg {
+		max-width: 1200px;
+		padding: 35px 45px 34px 55px;
+	   	grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: repeat(6, 1fr);
+	}
+	.bg-school {
+		grid-area: 1/2;
+	}
+	.bg-child {
+		grid-area: 1/3;
+	}
+	.bg-store {
+		grid-area: 1/4;
+	}
+	.bg-pharmacy {
+		grid-area: 1/5;
+	}
+	.bg-base {
+		grid-area: 2/2;
+	}
+	.bg-mail {
+		grid-area: 2/3;
+	}
+	.bg-library {
+		grid-area: 2/4;
+	}
+	.bg-atm {
+		grid-area: 2/5;
+	}
+	.bg-ss {
+		grid-area: 3/2;
+	}
+}
+
+@media screen and (max-width: 770px) {
+	.content-intro {
+		left: 80px;
+	}
+	.title-intro {
+		font-size: 26px;
+	}
+	.subtitle-price-intro {
+		font-size: 16px;
+	}
+	.button-intro {
+    	margin-top: 50px;
+	}
+	.about-text {
+		max-width: 600px;
+		margin: 0 auto;
+	}
+	.advantages {
+		flex-direction: column;
+		justify-content: center;
+	}
+	.advantage-item {
+		margin-bottom: 20px;
+	}
+	.slider-arrows__next {
+		padding: 35px 40px;
+    	right: 28px;
+    	bottom: 28px;
+	}
+	.slider-arrows__prev {
+		padding: 35px 40px;
+       	left: 28px;
+    	bottom: 28px;
+	}
+	.text-projects {
+		padding-bottom: 20px;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.arrow-bg {
+		padding: 26px;
+	}
+	.card-title {
+		margin-bottom: 20px;
+	}
+	.developer-slide-text {
+    	top: 50%;
+    	transform: translateY(-50%);
+	}
+	.developer-slide-title {
+    	font-size: 48px;
+	}
+	.developer-slide-subtitle {
+		font-size: 16px;
+	}
+	.dynamic-title {
+		text-align: center;
+		margin-left: 0;
+		margin-bottom: 40px;
+	}
+	.dynamic-cards {
+		max-width: 400px;
+		margin: 0 auto;
+	}
+	.dynamic .slick-list {
+		width: 385px;
+	}
+	.house-projects {
+		position: relative;
+		margin-bottom: 170px;
+	}
+	.all-projects {
+		position: absolute;
+		bottom: -70px;
+	}
+	.techno-items {
+		grid-gap: 25px;
+	}
+	.location-title {
+		text-align: center;
+	}
+	.location-bg {
+		padding: 25px 15px 20px 40px;
+	   	grid-template-rows: repeat(3, 1fr);
+		grid-template-columns: repeat(6, 160px);
+	}
+	.bg-school {
+		grid-area: 1/2;
+	}
+	.bg-child {
+		grid-area: 1/3;
+	}
+	.bg-store {
+		grid-area: 1/4;
+	}
+	.bg-pharmacy {
+		grid-area: 1/5;
+	}
+	.bg-base {
+		grid-area: 2/2;
+	}
+	.bg-mail {
+		grid-area: 2/3;
+	}
+	.bg-library {
+		grid-area: 2/4;
+	}
+	.bg-atm {
+		grid-area: 3/2;
+	}
+	.bg-ss {
+		grid-area: 3/3;
+	}
+	.call-back-img {
+		display: none;
+	}
+	.to-order {
+		margin: 30px auto;
+	}
+	.to-order-title, .to-order-subtitle {
+		text-align: center;
+	}
+	.form {
+		text-align: center;
+	}
+	.form input {
+		width: 100%;
+	}
+	.accept {
+		text-align: center;
+		margin: 45px auto;
+	}
+	.footer-contacts {
+		flex-direction: column;
+		margin: 65px 25px 0 25px;
+	}
+	.footer-info {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	.footer-inst {
+		margin-right: 0;
+	}
+	.footer-tel {
+		margin-top: 10px;
+	}
+	.footer-ooo {
+		margin-top: 10px;
+	}
+	.footer-politics {
+		margin-top: 10px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.header {
+		justify-content: space-between;
+	}
+	.contacts {
+		display: none;
+	}
+	.burger-contacts {
+		display: block;
+	}
+	.about-title, .map-title, .project-title, .developer-title, .dynamic-title, .location-title {
+    	font-size: 32px;
+	}
+	.about-subtitle {
+		font-size: 16px;
+		line-height: 23px;
+	}
+	.slider-arrows__next {
+		padding: 35px 40px;
+    	right: 23px;
+    	bottom: 23px;
+	}
+	.slider-arrows__prev {
+		padding: 35px 40px;
+       	left: 23px;
+    	bottom: 23px;
+	}
+	.developer-comment:before {
+		top: 5px;
+	}
+	.developer-slide-title {
+    	font-size: 36px;
+	}
+	.developer-slide-subtitle {
+		margin-top: 10px;
+	}
+	.location-bg {
+		padding: 25px 0 20px 0;
+	   	grid-template-rows: repeat(4, 1fr);
+		grid-template-columns: repeat(5, 160px);
+	}
+	.bg-school {
+		grid-area: 1/2;
+	}
+	.bg-child {
+		grid-area: 1/3;
+	}
+	.bg-store {
+		grid-area: 1/4;
+	}
+	.bg-pharmacy {
+		grid-area: 2/2;
+	}
+	.bg-base {
+		grid-area: 2/3;
+	}
+	.bg-mail {
+		grid-area: 2/4;
+	}
+	.bg-library {
+		grid-area: 3/2;
+	}
+	.bg-atm {
+		grid-area: 3/3;
+	}
+	.bg-ss {
+		grid-area: 3/4;
+	}
+}
+
+@media screen and (max-width: 540px) {
+	.burger {
+		width: 100%;
+		right: -600px;
+	}
+	.intro {
+		min-height: 0;
+		height: 550px;
+	}
+	.content-intro {
+    	left: 30px;
+    	top: 160px;
+	}
+	.about-title, .map-title, .project-title, .developer-title, .dynamic-title, .location-title {
+    	font-size: 28px;
+	}
+	.about-text {
+		margin: 0 15px;
+	}
+	.slider-arrows__next {
+		padding: 35px 40px;
+    	right: 19px;
+    	bottom: 19px;
+	}
+	.slider-arrows__prev {
+		padding: 35px 40px;
+       	left: 19px;
+    	bottom: 19px;
+	}
+	.techno-items {
+	    grid-template-columns: repeat(1, 289px);
+	}
+	.developer-ooo {
+		margin-top: 30px;
+	}
+	.location-bg {
+	    padding: 25px 0 20px 25px;
+	}
+	.footer-nav {
+		flex-direction: column;
+	}
+	.footer-nav li:not(:last-child) {
+    margin-right: 0;
+	}
+	.footer-nav li {
+		line-height: 31px;
+	}
+}
+
+@media screen and (max-width: 414px) {
+	.burger-list {
+    	margin: 20px 0 30px 40px;
+	}
+	.content-intro {
+    	left: 25px;
+    	top: 100px;
+	}
+	.title-intro {
+    	font-size: 24px;
+    	width: 400px;
+	}
+	.subtitles-intro {
+		width: 400px;
+	}
+	.slider-arrows__next {
+		padding: 25px 30px;
+    	right: 16px;
+    	bottom: -60px;
+    	box-shadow: 0 0 10px #E8E8E8;
+       	border-radius: 0;
+	}
+	.slider-arrows__prev {
+		padding: 25px 30px;
+    	left: 16px;
+    	bottom: -60px;
+    	box-shadow: 0 0 10px #E8E8E8;
+    	border-radius: 0;
+	}
+	.about-title, .map-title, .project-title, .developer-title, .dynamic-title, .location-title {
+    	font-size: 25px;
+	}
+	.developer-comment {
+		font-size: 17px;
+	}
+	.developer-title, .developer-quote {
+    	margin-right: 10px;
+    	margin-left: 10px;
+	}
+	.developer-comment:before {
+    	top: 0;
+    	height: 118px;
+	}
+	.location-title {
+    	margin-left: 0;
+	}
+	.location-bg {
+		padding: 25px 0 20px 0;
+	   	grid-template-rows: repeat(4, 1fr);
+		grid-template-columns: repeat(4, 150px);
+		grid-row-gap: 25px;
+		grid-column-gap: 40px;
+	}
+	.bg-school {
+		grid-area: 1/2;
+	}
+	.bg-child {
+		grid-area: 1/3;
+	}
+	.bg-store {
+		grid-area: 2/2;
+	}
+	.bg-pharmacy {
+		grid-area: 2/3;
+	}
+	.bg-base {
+		grid-area: 3/2;
+	}
+	.bg-mail {
+		grid-area: 3/3;
+	}
+	.bg-library {
+		grid-area: 4/2;
+	}
+	.bg-atm {
+		grid-area: 4/3;
+	}
+	.bg-ss {
+		grid-area: 5/2;
+	}
+	.to-order {
+		padding: 0 10px;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.header {
+    	padding: 10px 15px 10px 15px;
+	}
+	.burger {
+		top: 103px;
+	}
+	.content-intro {
+    	left: 18px;
+	}
+	.title-intro {
+		width: 330px;
+	}
+	.subtitles-intro {
+		width: 330px;
+	}
+	.advantages {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	.projects-cards {
+		padding: 0 10px;
+	}
+	.arrow-bg {
+		display: none;
+	}
+	.all-projects {
+		text-decoration: underline;
+	}
+	.developer-slide-text {
+		left: 30px;
+	}
+	.developer-slide-title {
+    	font-size: 30px;
+	}
+	.developer-slide-subtitle {
+    	font-size: 14px;
+    	margin-top: 5px;
+	}
+	.dynamic .slick-list {
+		padding: 20px;
+	}
+	.dynamic-card {
+		max-width: 320px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.content-intro {
+    	left: 10px;
+	}
+	.title-intro {
+    	width: 300px;
+    	font-size: 22px;
+    	padding-bottom: 18px;
+	}
+	.subtitles-intro {
+    	width: 300px;
+	}
+	.button-intro {
+		margin-top: 40px;
+	}
+	.about-title, .map-title, .project-title, .developer-title, .dynamic-title, .location-title {
+    	font-size: 23px;
+	}
+	.about {
+    	margin: 50px auto auto auto;
+	}
+	.advantage-img-title {
+		font-size: 21px;
+	}
+	.advantage-img-subtitle {
+		font-size: 16px;
+    	line-height: 25px;
+	}
+	.slides {
+		margin-top: 70px;
+	}
+	.advantages {
+		margin-top: 60px;
+	}
+	.slides {
+		margin-bottom: 110px;
+	}
+	.slider-arrows__next {
+		padding: 20px 25px;
+    	right: 16px;
+    	bottom: -55px;
+    	box-shadow: 0 0 10px #E8E8E8;
+       	border-radius: 0;
+	}
+	.slider-arrows__prev {
+		padding: 20px 25px;
+    	left: 16px;
+    	bottom: -55px;
+    	box-shadow: 0 0 10px #E8E8E8;
+    	border-radius: 0;
+	}
+	.map-title {
+		margin-bottom: 40px;
+	}
+	.house-projects {
+		margin-top: 80px;
+	}
+	.text-projects {
+		padding-bottom: 0;
+	}
+	.card-content {
+    	padding: 20px 15px 20px 15px;
+	}
+	.all-projects {
+		bottom: -60px;
+	}
+	.developer-slide-title {
+    	font-size: 26px;
+	}
+	.dynamic .slick-list {
+    	padding: 10px;
+	}
+	.dynamic-card {
+    	max-width: 300px;
+	}
+	.dynamic-card-content {
+    	padding: 20px 30px 20px 20px;
+	}
+	.bg:before {
+		margin-right: 10px;
+	}
+	.location-map {
+		margin-top: 30px;
+	}
+	.location-bg {
+		padding: 25px 0 20px 0;
+	   	grid-template-rows: repeat(4, 1fr);
+		grid-template-columns: repeat(4, 145px);
+		grid-row-gap: 22px;
+		grid-column-gap: 15px;
+	}
+	.bg-school {
+		grid-area: 1/2;
+	}
+	.bg-child {
+		grid-area: 1/3;
+	}
+	.bg-store {
+		grid-area: 2/2;
+	}
+	.bg-pharmacy {
+		grid-area: 2/3;
+	}
+	.bg-base {
+		grid-area: 3/2;
+	}
+	.bg-mail {
+		grid-area: 3/3;
+	}
+	.bg-library {
+		grid-area: 4/2;
+	}
+	.bg-atm {
+		grid-area: 4/3;
+	}
+	.bg-ss {
+		grid-area: 5/2;
+	}
+	.footer-ooo {
+		font-size: 13px;
+	}
 }
